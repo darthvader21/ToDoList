@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+
+body{
+  background: #edf0f1;
+  /*margin: 0;*/
+
+  /*because list whatever we giving wasnt appearing so we will add the height of the header*/
+  padding: 80px 0 0 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  /*position is given fixed because we need to stay that header on top when the page scrolls also*/
+  position: fixed;
+  background: #25b99a;
+
+  
+  
+  /*The little gap annoying all the time will be gone*/
+  top:0;
+  left:0;
+  padding: 15px;
+
+  /*z-index is given larger because that you know there shouldnt be any over lapping things*/
+  z-index: 5;
+
+  /*shadow is to be given at the bottom of the box so we have to specify box shadow, x, y and blur followed by the color*/
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/*Moving on to the input inside the header */
+header input {
+  /*before the below line it was a small little text box*/
+  width: 100%;
+  height: 50px;
+
+  float: left;
+  color: #fff;
+  font-size: 15px;
+
+  /*we can see the text going to all the bar we can change it giving the padding*/
+  padding:0 60px 0 0;
+  
+  /*moves the text into middle of the search bar*/
+  text-indent: 18px;
+  
+  /*because we need a reasonble color for the box */
+  background: rgba(255, 255, 255, 0.2);
+
+  /*border radius left, top, bottom and right*/
+  border-radius: 5px 25px 25px 5px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  /*apperance for different platforms*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+}
+
+/*the below ones are browser compaitable fixes which I took from css tricks*/
+
+  header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+
+  /*So we can click it*/
+  cursor: pointer;
+
+  /*Since this is going to be on the top of input field we gonna have to poistion it to the absolute*/
+  position: absolute;
+
+  border-radius: 25px;
+  z-index: 2;
+
+  /*before this the plus button was down the search bar as it*/
+  /*doesnt belong to the same div after this it jumped back next to the search bar to accoomadate to the padding */
+  top:15px;
+  right: 15px;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  /*apperance for different platforms we can also */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+header button svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  margin: -8px 0 0 -8px;
+  top: 50%;
+  left: 50%;
+}
+
+.fill {
+  fill: #25b99a;
+}
+
+.wrap {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+
+.todo {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.todo li {
+  width: 100%;
+  float: left;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position:relative;
+  padding: 15px;
+  /*padding:0 60px 0 0;*/
+}
+
+/*.buttons {
+  width: 100px;
+  height: 50px;
+  position:absolute;
+  top:0;
+  right: 0;
+}
+
+.buttons button {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+*/
+  /*apperance for different platforms we can also */
+  /*-webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}*/
+.addbutton {
+  width: 20px;
+  height: 20px;
+  float: right;
+  border: 2px solid #25b99a;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+.deletebutton {
+  width: 20px;
+  height: 20px;
+  float: right; 
+  margin-right: 15px;
+  cursor: pointer;
+}
+.completed {
+  margin-top: 400px;
+  text-align: center;
+}
